@@ -1,0 +1,12 @@
+Assignment_3/.env
+Assignment_3/*.png
+Assignment_3/credentials.json
+Assignment_3/token.json
+Assignment_3/eag.json
+
+Assignment_3/cursor_position.py
+Assignment_3/client.py
+Assignment_3/gmail.py
+Assignment_3/send_mail.py
+Assignment_3/open.py
+Assignment_3/paint.py
