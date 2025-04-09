@@ -1,5 +1,6 @@
 Assignment_3/.env
 Assignment_4/.env
+Assignment_4_extra/config.py
 
 Assignment_3/*.png
 Assignment_3/credentials.json
@@ -14,3 +15,7 @@ Assignment_3/paint.py
 
 Assignment_4/open_pdf.py
 Assignment_4/website_crawler.py
+
+Assignment_4_extra/logs.log
+Assignment_4_extra/Notes
+
