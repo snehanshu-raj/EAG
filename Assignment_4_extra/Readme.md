@@ -3,20 +3,7 @@
 Have lots of PDF? Notes? This is a basic (version 1) agent where you can give a query/topic which you want to search from your lecture notes and the agent will pin point open the exact page in the exact PDF where that topic is present in a new, navigable window.
 
 ## Project Structure
-|   client.py
-|   config.py
-|   logs.log
-|   pdf_handler.py
-|   prompt.py
-|   Readme.md
-|   server.py
-|
-+---Notes
-|       Lecture1.pdf
-|       Lecture2.pdf
-|       Lecture3.pdf
-|       Lecture4.pdf
-|       Lecture5.pdf
+| client.py | config.py | logs.log | pdf_handler.py | prompt.py | Readme.md | server.py | +---Notes | Lecture1.pdf | Lecture2.pdf | Lecture3.pdf | Lecture4.pdf | Lecture5.pdf
 
 
 ### Files and Directories:
