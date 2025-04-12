@@ -1,0 +1,108 @@
+{
+  "iterations": [
+    {
+      "iteration": 1,
+      "response": {
+        "tool": "get_all_pdf_files_path",
+        "params": {},
+        "result": {
+          "pdf_paths": [
+            "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf",
+            "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture2.pdf",
+            "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf",
+            "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture4.pdf",
+            "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf"
+          ]
+        }
+      }
+    },
+    {
+      "iteration": 2,
+      "response": {
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "Dijsktra Algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf"
+        },
+        "result": {
+          "query": "Dijsktra Algorithm",
+          "answer_found": "false",
+          "page_number": "1"
+        }
+      }
+    },
+    {
+      "iteration": 3,
+      "response": {
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "Dijsktra Algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture2.pdf"
+        },
+        "result": {
+          "query": "Dijsktra Algorithm",
+          "answer_found": "false",
+          "page_number": "0"
+        }
+      }
+    },
+    {
+      "iteration": 4,
+      "response": {
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "Dijsktra Algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf"
+        },
+        "result": {
+          "query": "Dijsktra Algorithm",
+          "answer_found": "false",
+          "page_number": "N/A"
+        }
+      }
+    },
+    {
+      "iteration": 5,
+      "response": {
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "Dijsktra Algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture4.pdf"
+        },
+        "result": {
+          "query": "Dijsktra Algorithm",
+          "answer_found": "false",
+          "page_number": "1"
+        }
+      }
+    },
+    {
+      "iteration": 6,
+      "response": {
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "Dijsktra Algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf"
+        },
+        "result": {
+          "query": "Dijsktra Algorithm",
+          "answer_found": "true",
+          "page_number": "5"
+        }
+      }
+    },
+    {
+      "iteration": 7,
+      "response": {
+        "tool": "view_pdf",
+        "params": {
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf",
+          "page_number": "5"
+        },
+        "result": {
+          "response": "success"
+        }
+      }
+    }
+  ]
+}

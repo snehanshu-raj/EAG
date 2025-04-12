@@ -1,6 +1,7 @@
 Assignment_3/.env
 Assignment_4/.env
 Assignment_4_extra/config.py
+Assignment_5/config.py
 
 Assignment_3/*.png
 Assignment_3/credentials.json
