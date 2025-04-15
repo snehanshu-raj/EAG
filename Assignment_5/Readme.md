@@ -1,6 +1,6 @@
-# 🤖 Agentic Task Planner with Decoupled Components
+# PDF Query Agentic Project
 
-This project is an **agentic execution engine** that allows step-by-step problem solving using a language model (LLM) like Gemini. It is fully modularized for readability, testability, and flexibility.
+Have lots of PDF? Notes? This is a basic (version 1) agent where you can give a query/topic which you want to search from your lecture notes and the agent will pin point open the exact page in the exact PDF where that topic is present in a new, navigable window.
 
 The LLM:
 - Receives a task query.
