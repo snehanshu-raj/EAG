@@ -26,11 +26,11 @@ The LLM:
 
 ## 🧩 Project Structure & Responsibilities
 
-├── ll_perception.py # Calls Gemini API and validates JSON responses 
-├── memory_handler.py # Handles iteration state tracking and persistence 
-├── action_performer.py # Executes tools and maps arguments based on schema 
-├── decision_maker.py # Prepares LLM prompt based on context, tools, and memory
-├── pdf_handler.py # To handle PDF related operations upon successfull search
+- ├── ll_perception.py # Calls Gemini API and validates JSON responses 
+- ├── memory_handler.py # Handles iteration state tracking and persistence 
+- ├── action_performer.py # Executes tools and maps arguments based on schema 
+- ├── decision_maker.py # Prepares LLM prompt based on context, tools, and memory
+- ├── pdf_handler.py # To handle PDF related operations upon successfull search
 
 
 ---
