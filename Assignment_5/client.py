@@ -30,36 +30,37 @@ async def main(query):
 
                 try:
                     response = await generate_with_timeout(prompt)
-                    parsed = validate_response(response.text)
+                    parsed_llm_response = validate_response(response.text)
                 except Exception as e:
                     add_iteration(f"Issue in JSON response schema from LLM as: {e}")
                     iteration_count += 1
                     continue
 
-                func_name = parsed.get("function_name")
+                func_name = parsed_llm_response.get("function_name")
                 if func_name and func_name != "None":
                     try:
                         tool = next(t for t in tools if t.name == func_name)
-                        args, output = await execute_tool(session, tool, func_name, parsed["params"])
-                        print(output)
-                        print(type(output))
+                        args, output = await execute_tool(session, tool, func_name, parsed_llm_response["params"])
+                        # print(output)
+                        # print(type(output))
                         
                         result = {
+                            "llm_response": parsed_llm_response,
                             "tool": func_name,
                             "params": args,
-                            "result": output
+                            "result": output,
                         }
                         add_iteration(result)
 
-                        if func_name == "view_pdf":
-                            print(f"Result found in PDF: {args['pdf_file_path']} on page {args['page_number']}")
+                        if func_name == "finish_task":
+                            print(f"{output}")
                             break
                     except Exception as e:
                         traceback.print_exc()
                         add_iteration(f"Error executing {func_name}: {e}")
                         break
                 else:
-                    add_iteration("Uncertain LLM response, needs reprocessing.")
+                    add_iteration({"Exception": parsed_llm_response})
 
                 iteration_count += 1
 

@@ -1,8 +1,6 @@
 from mcp.server.fastmcp import FastMCP
-from PIL import Image as PILImage
 import os
 import config
-import asyncio
 from google import genai
 import mcp
 from pydantic import BaseModel
@@ -53,6 +51,11 @@ async def view_pdf(pdf_file_path: str, page_number: str):
     """Opens a PDF and navigates to the given page number."""
     PDFViewer(pdf_file_path, int(page_number))
     return {"response": "success"}
+
+@mcp.tool()
+async def finish_task(message: str):
+    """Terminates the agent execution by either saying if the search was sucessfull or not."""
+    return {"response": message}
 
 # async def main():
 #     file_paths = await get_all_pdf_files_path()

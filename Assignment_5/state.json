@@ -3,6 +3,12 @@
     {
       "iteration": 1,
       "response": {
+        "llm_response": {
+          "function_name": "get_all_pdf_files_path",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "lookup"
+        },
         "tool": "get_all_pdf_files_path",
         "params": {},
         "result": {
@@ -19,88 +25,123 @@
     {
       "iteration": 2,
       "response": {
+        "llm_response": {
+          "function_name": "search_for_query_in_pdf",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "search"
+        },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "Dijsktra Algorithm",
+          "query": "weighted interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf"
         },
         "result": {
-          "query": "Dijsktra Algorithm",
-          "answer_found": "false",
-          "page_number": "1"
-        }
-      }
-    },
-    {
-      "iteration": 3,
-      "response": {
-        "tool": "search_for_query_in_pdf",
-        "params": {
-          "query": "Dijsktra Algorithm",
-          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture2.pdf"
-        },
-        "result": {
-          "query": "Dijsktra Algorithm",
-          "answer_found": "false",
-          "page_number": "0"
-        }
-      }
-    },
-    {
-      "iteration": 4,
-      "response": {
-        "tool": "search_for_query_in_pdf",
-        "params": {
-          "query": "Dijsktra Algorithm",
-          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf"
-        },
-        "result": {
-          "query": "Dijsktra Algorithm",
+          "query": "weighted interval scheduling problem",
           "answer_found": "false",
           "page_number": "N/A"
         }
       }
     },
     {
-      "iteration": 5,
+      "iteration": 3,
       "response": {
+        "llm_response": {
+          "function_name": "search_for_query_in_pdf",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "search"
+        },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "Dijsktra Algorithm",
+          "query": "weighted interval scheduling problem",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture2.pdf"
+        },
+        "result": {
+          "query": "weighted interval scheduling problem",
+          "answer_found": "false",
+          "page_number": "N/A"
+        }
+      }
+    },
+    {
+      "iteration": 4,
+      "response": {
+        "llm_response": {
+          "function_name": "search_for_query_in_pdf",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "search"
+        },
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "weighted interval scheduling problem",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf"
+        },
+        "result": {
+          "query": "weighted interval scheduling problem",
+          "answer_found": "false",
+          "page_number": "0"
+        }
+      }
+    },
+    {
+      "iteration": 5,
+      "response": {
+        "llm_response": {
+          "function_name": "search_for_query_in_pdf",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "search"
+        },
+        "tool": "search_for_query_in_pdf",
+        "params": {
+          "query": "weighted interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture4.pdf"
         },
         "result": {
-          "query": "Dijsktra Algorithm",
+          "query": "weighted interval scheduling problem",
           "answer_found": "false",
-          "page_number": "1"
+          "page_number": "N/A"
         }
       }
     },
     {
       "iteration": 6,
       "response": {
+        "llm_response": {
+          "function_name": "search_for_query_in_pdf",
+          "params": [],
+          "final_ans": "None",
+          "reasoning_type": "search"
+        },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "Dijsktra Algorithm",
+          "query": "weighted interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf"
         },
         "result": {
-          "query": "Dijsktra Algorithm",
-          "answer_found": "true",
-          "page_number": "5"
+          "query": "weighted interval scheduling problem",
+          "answer_found": "false",
+          "page_number": "N/A"
         }
       }
     },
     {
       "iteration": 7,
       "response": {
-        "tool": "view_pdf",
+        "llm_response": {
+          "function_name": "finish_task",
+          "params": [],
+          "final_ans": "The query could not found in any notes.",
+          "reasoning_type": "unsuccessfull"
+        },
+        "tool": "finish_task",
         "params": {
-          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf",
-          "page_number": "5"
+          "message": "The query could not found in any notes."
         },
         "result": {
-          "response": "success"
+          "response": "The query could not found in any notes."
         }
       }
     }

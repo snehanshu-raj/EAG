@@ -39,6 +39,26 @@ You MUST return a JSON object in one of the following forms:
   "final_ans": "Yes, the query is present on page 5."
 }
 
+Finish task:
+- If a search was succesfull call this method by passing success response along woth pdf location.
+- if the query couldd nit be found in any PDF call this by saying query not present.
+
+i. if unsucessfull
+{
+  "reasoning_type": "unsuccessfull",
+  "function_name": "finish_task",
+  "params": ["The query could not found in any notes."],
+  "final_ans": "The query could not found in any notes."
+}
+
+ii. if sucessfull
+{
+  "reasoning_type": "successfull",
+  "function_name": "finish_task",
+  "params": ["The query was found in pdf: <pdf_path> on page number: <page number>"],
+  "final_ans": "The query has been found."
+}
+
 Fallback (tool fails or uncertain):
 {
   "reasoning_type": "uncertain",
