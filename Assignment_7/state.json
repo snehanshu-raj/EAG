@@ -1,0 +1,32 @@
+{
+  "iterations": [
+    {
+      "iteration": 1,
+      "response": {
+        "llm_response": {
+          "function_name": "search_query",
+          "params": {
+            "text": "check",
+            "image_bytes": "False",
+            "type": "image"
+          },
+          "final_ans": "None",
+          "reasoning_type": "Tool Call"
+        },
+        "tool": "search_query",
+        "params": {
+          "text": "check",
+          "image_bytes": "None",
+          "type": "image"
+        },
+        "result": {
+          "image_path": "downloaded_images/4c345d43cc50c7ef12c3ff61b3d0ddf6.jpg",
+          "xpath": "/[document][1]/html[1]/body[1]/div[2]/footer[1]/div[3]/div[1]/section[1]/div[2]/div[2]/div[1]/div[1]/img[1]",
+          "url": "https://www.imdb.com/title/tt5697572/",
+          "timestamp": "2025-04-21T03:32:46.411Z",
+          "type": "image"
+        }
+      }
+    }
+  ]
+}

@@ -71,6 +71,8 @@ Fallback (tool fails or uncertain):
 - Start by calling get_all_pdf_files_path to get the list of PDFs.
 - Then iterate through the PDFs using search_for_query_in_pdf(query, file_path) until a match is found.
 - Keep calling search_for_query_in_pdf() with the query with all the pdf_file_paths until successful search.
+- Query could be looking for different topics present in differnet PDF. You need to decide how many queries are there and keep searching for all the topics and open PDF for all matching ones.
+- Say query is: "i am looking for <topic 1> and <topic 2>". Once you begin looking through PDFs whichever is found first open that and then continue for the next.
 - If a match is found, extract the page number and call view_pdf(pdf_path, page_number).
 - Only produce a final_ans once the match has been confirmed.
 - DO NOT repeat function calls with the same parameters.

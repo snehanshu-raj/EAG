@@ -20,3 +20,13 @@ Assignment_4/website_crawler.py
 Assignment_4_extra/logs.log
 Assignment_4_extra/Notes
 
+Assignment_7/logs.log
+Assignment_7/config.py
+Assignment_7/downloaded_images
+Assignment_7/extracted_data
+Assignment_7/url_logs
+Assignment_7/delete.py
+Assignment_7/qdrant_tester.py
+Assignment_7/qdrant_helper.py
+Assignment_7/test.py
+

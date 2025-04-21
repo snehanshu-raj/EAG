@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Website Tracker",
+    "description": "Logs visited websites and their HTML content.",
+    "version": "1.0",
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "action": {
+      "default_title": "Semantic History Tracker"
+    }
+  }
+  

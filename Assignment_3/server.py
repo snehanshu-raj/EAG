@@ -385,6 +385,7 @@ def send_email(to: str, subject: str, body: str):
             print(f"Message sent to {to} Message Id: {send_message['id']}")
         except HttpError as error:
             print(f"An error occurred: {error}")
+            
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first

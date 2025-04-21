@@ -33,13 +33,13 @@
         },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "weighted interval scheduling problem",
+          "query": "interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf"
         },
         "result": {
-          "query": "weighted interval scheduling problem",
+          "query": "interval scheduling problem",
           "answer_found": "false",
-          "page_number": "N/A"
+          "page_number": "0"
         }
       }
     },
@@ -54,13 +54,13 @@
         },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "weighted interval scheduling problem",
+          "query": "interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture2.pdf"
         },
         "result": {
-          "query": "weighted interval scheduling problem",
+          "query": "interval scheduling problem",
           "answer_found": "false",
-          "page_number": "N/A"
+          "page_number": "0"
         }
       }
     },
@@ -75,13 +75,13 @@
         },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "weighted interval scheduling problem",
+          "query": "interval scheduling problem",
           "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf"
         },
         "result": {
-          "query": "weighted interval scheduling problem",
-          "answer_found": "false",
-          "page_number": "0"
+          "query": "interval scheduling problem",
+          "answer_found": "true",
+          "page_number": "2"
         }
       }
     },
@@ -89,20 +89,18 @@
       "iteration": 5,
       "response": {
         "llm_response": {
-          "function_name": "search_for_query_in_pdf",
+          "function_name": "view_pdf",
           "params": [],
-          "final_ans": "None",
-          "reasoning_type": "search"
+          "final_ans": "Yes, the query is present on page 2.",
+          "reasoning_type": "show answer"
         },
-        "tool": "search_for_query_in_pdf",
+        "tool": "view_pdf",
         "params": {
-          "query": "weighted interval scheduling problem",
-          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture4.pdf"
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf",
+          "page_number": "2"
         },
         "result": {
-          "query": "weighted interval scheduling problem",
-          "answer_found": "false",
-          "page_number": "N/A"
+          "response": "success"
         }
       }
     },
@@ -117,13 +115,13 @@
         },
         "tool": "search_for_query_in_pdf",
         "params": {
-          "query": "weighted interval scheduling problem",
-          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture5.pdf"
+          "query": "gale shapley algorithm",
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf"
         },
         "result": {
-          "query": "weighted interval scheduling problem",
-          "answer_found": "false",
-          "page_number": "N/A"
+          "query": "gale shapley algorithm",
+          "answer_found": "true",
+          "page_number": "15"
         }
       }
     },
@@ -131,17 +129,36 @@
       "iteration": 7,
       "response": {
         "llm_response": {
+          "function_name": "view_pdf",
+          "params": [],
+          "final_ans": "Yes, the query is present on page 15.",
+          "reasoning_type": "show answer"
+        },
+        "tool": "view_pdf",
+        "params": {
+          "pdf_file_path": "C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf",
+          "page_number": "15"
+        },
+        "result": {
+          "response": "success"
+        }
+      }
+    },
+    {
+      "iteration": 8,
+      "response": {
+        "llm_response": {
           "function_name": "finish_task",
           "params": [],
-          "final_ans": "The query could not found in any notes.",
-          "reasoning_type": "unsuccessfull"
+          "final_ans": "The query has been found.",
+          "reasoning_type": "successfull"
         },
         "tool": "finish_task",
         "params": {
-          "message": "The query could not found in any notes."
+          "message": "The query 'interval scheduling problem' was found in pdf: C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf on page number: 2 and The query 'gale shapley algorithm' was found in pdf: C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf on page number: 15"
         },
         "result": {
-          "response": "The query could not found in any notes."
+          "response": "The query 'interval scheduling problem' was found in pdf: C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture3.pdf on page number: 2 and The query 'gale shapley algorithm' was found in pdf: C:\\Users\\Snehanshu Raj\\OneDrive\\Desktop\\EAG\\Assignment_4_extra\\Notes\\Lecture1.pdf on page number: 15"
         }
       }
     }
