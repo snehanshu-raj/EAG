@@ -47,7 +47,8 @@ const blockedDomains = [
     "facebook.com",
     "youtube.com",
     "google.com",
-    "http:localhost"
+    "http:localhost", 
+    "figma.com"
   ];
   
   function isBlocked(url) {

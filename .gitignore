@@ -29,4 +29,6 @@ Assignment_7/delete.py
 Assignment_7/qdrant_tester.py
 Assignment_7/qdrant_helper.py
 Assignment_7/test.py
+Assignment_7/*.txt
+Assignment_7/*.jpg
 

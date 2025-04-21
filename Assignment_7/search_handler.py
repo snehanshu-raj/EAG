@@ -2,6 +2,7 @@ import requests
 from qdrant_helper import QdrantHelper
 import httpx
 import asyncio
+import base64
 
 qdrant_helper = QdrantHelper()
 
@@ -28,7 +29,7 @@ async def async_get_embeddings(text=None, image_bytes=None, type=None):
                 else:
                     response = await client.post(clip_text_embed_url, json=data)
             else:
-                files = {'file': ('image.jpg', image_bytes, 'image/jpeg')}
+                files = {'file': ('image.jpg', base64.b64decode(image_bytes), 'image/jpeg')}
                 response = await client.post(clip_image_embed_url, files=files)
 
             response.raise_for_status()
@@ -50,7 +51,7 @@ async def async_search(text=None, image_bytes=None, type=None):
                 logger.info(f"[Embeddings - Text] {embeddings}")
                 results = await asyncio.to_thread(
                     qdrant_helper.search,
-                    "web_history", embeddings, limit=1, feature_name="ollama", filters={"type": [type]}
+                    "web_history", embeddings, limit=1, feature_name="ollama", filters={"type": [type]} # type means basically whether image or text
                 )
             else:
                 embeddings = (await async_get_embeddings(text=text, type="image"))["text_embedding"]
@@ -64,8 +65,9 @@ async def async_search(text=None, image_bytes=None, type=None):
             logger.info(f"[Embeddings - Image] {embeddings}")
             results = await asyncio.to_thread(
                 qdrant_helper.search,
-                "web_history", embeddings, limit=1, feature_name="clip", filters={"type": [type]}
+                "web_history", embeddings, limit=5, feature_name="clip", filters={"type": [type]}
             )
+            logger.info(f"[Qdrant Results] {results}")
 
         logger.info(f"[Qdrant Results] {results}")
         result = results[0].payload
@@ -110,7 +112,8 @@ def search(text=None, image_bytes=None, type=None):
             results = qdrant_helper.search("web_history", embeddings, limit=1, feature_name="clip", filters={"type": [type]})
     else:
         embeddings = get_embeddings(image_bytes=image_bytes, type=type)["image_embedding"]
-        results = qdrant_helper.search("web_history", embeddings, limit=1, feature_name="clip", filters={"type": [type]})
+        results = qdrant_helper.search("web_history", embeddings, limit=5, feature_name="clip", filters={"type": [type]})
+        results = results[1:]
 
     logger.info(results)
     result = results[0].payload

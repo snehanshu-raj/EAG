@@ -1,5 +1,6 @@
 import json
 from ast import literal_eval
+import base64
 
 async def execute_tool(session, tool, func_name, params: dict, image_bytes):
     arguments = {}
@@ -24,11 +25,13 @@ async def execute_tool(session, tool, func_name, params: dict, image_bytes):
         else:
             arguments[param_name] = str(value) if value is not None else None
 
+    print(arguments)
     if (arguments["image_bytes"] == "True"):
-        arguments['image_bytes'] = image_bytes
+        arguments['image_bytes'] = base64.b64encode(image_bytes).decode('utf-8')
     else:
-        arguments["image_bytes"] = "None"
+        del arguments["image_bytes"]
 
+    print(arguments)
     result = await session.call_tool(func_name, arguments=arguments)
     return arguments, literal_eval(json.loads(json.dumps(result.content[0].text)))
 

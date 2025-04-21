@@ -2,7 +2,7 @@
 A powerful browser extension + server system that turns every page you visit into a searchable memory — both text and images.
 
 ## 🚀 Key Features
-# 🔄 Automatic Memory Logging
+# 🔄 Automatic Memory Logging: First Chrome Extension
 - Every visited URL is logged with:
 - Complete HTML content
 - Images on the page
@@ -11,7 +11,7 @@ A powerful browser extension + server system that turns every page you visit int
 # 🧠 Semantic Indexing (Text + Image)
 - Not just keywords — the system understands and stores both what you read and what you saw.
 
-# 🔍 Natural Search over Your Browsing Memory
+# 🔍 Natural Search over Your Browsing Memory: Second Chrome Extension
 Forget standard browser history. Just describe what you remember:
 
 - "That red sneaker product page"
@@ -26,7 +26,8 @@ Forget standard browser history. Just describe what you remember:
 
 # 🧩 Built With
 - Python + FastAPI for backend
-- Redis for URL tracking
+- Uses Ollama + CLIP 
+- Redis which serves as Queue + URL tracking and to avoid duplication.
 - Multimodal search agent (LLM + tools)
 - HTML + image indexing
 

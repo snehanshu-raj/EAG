@@ -21,6 +21,9 @@ async def get_text_embedding(request: EmbedRequest):
 @app.post("/get-clip-image-embedding")
 async def get_image_embedding(file: UploadFile = File(...)):
     image_bytes = await file.read()
+    with open("zzzz.jpg", "wb") as f:
+        f.write(image_bytes)
+
     return embedder.embed(image_bytes=image_bytes)
 
 if __name__ == "__main__":
