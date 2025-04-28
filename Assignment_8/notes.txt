@@ -1,0 +1,27 @@
+Step 1: Create a Google Cloud Project and Enable Sheets API
+- Go to Google Cloud Console.
+- Click "Create Project" → Give it a name like "Sheet API Project" → Create.
+- Open your new project.
+- Go to APIs & Services → Library.
+- Search for "Google Sheets API" → Enable it.
+- Also search for "Google Drive API" → Enable it. (Drive API is needed to set permissions.)
+- Enable Gmail API
+
+Step 2: Create a Service Account and Get Credentials
+- Go to APIs & Services → Credentials.
+- Click "Create Credentials" → choose Service Account.
+- Fill the name and description → Create → Continue → Done.
+- Now under Credentials, find your Service Account → Click it.
+- Go to "Keys" tab → Add Key → Create new key → Choose JSON → Download.
+- This will download a .json file — keep it safe!
+
+For enabling Gmail API Set Up OAuth 2.0 Credentials:
+- In the Google Cloud Console, go to APIs & Services > Credentials.
+- Click on Create Credentials, then select OAuth client ID.
+- If prompted, configure the OAuth consent screen (you can leave the default settings for now).
+- For Application type, select Desktop app.
+- Click Create, and you'll be given a Client ID and Client Secret.
+- Download the credentials file (credentials.json) for use in your script.
+- Go to OAuth consent screen
+- Go to audience
+- Add test users: add your email ID
